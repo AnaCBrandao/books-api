@@ -24,4 +24,6 @@ Route.group(() => {
   Route.get('/', async () => {
     return { hello: 'world' }
   })
+
+  Route.resource('/books', 'BooksController').apiOnly()
 }).prefix('/api')
