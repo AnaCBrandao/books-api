@@ -26,4 +26,6 @@ Route.group(() => {
   })
 
   Route.resource('/books', 'BooksController').apiOnly()
+
+  Route.post('/books/:bookId/comments', 'CommentsController.store')
 }).prefix('/api')

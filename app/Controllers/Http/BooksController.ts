@@ -37,7 +37,7 @@ export default class BooksController {
   }
 
   public async index() {
-    const books = await Book.all()
+    const books = await Book.query().preload('comments')
 
     return {
       data: books,
@@ -46,6 +46,8 @@ export default class BooksController {
 
   public async show({ params }: HttpContextContract) {
     const book = await Book.findOrFail(params.id)
+
+    await book.load('comments')
 
     return {
       data: book,
