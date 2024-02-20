@@ -21,10 +21,6 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.group(() => {
-  Route.get('/', async () => {
-    return { hello: 'world' }
-  })
-
   Route.resource('/books', 'BooksController').apiOnly()
 
   Route.post('/books/:bookId/comments', 'CommentsController.store')
