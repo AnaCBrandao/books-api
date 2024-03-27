@@ -15,7 +15,7 @@
 |
 | import './routes/cart'
 | import './routes/customer'
-|
+|   
 */
 
 import Route from '@ioc:Adonis/Core/Route'
@@ -25,3 +25,5 @@ Route.group(() => {
 
   Route.post('/books/:bookId/comments', 'CommentsController.store')
 }).prefix('/api')
+
+//batata
