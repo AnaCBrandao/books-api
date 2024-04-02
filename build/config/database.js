@@ -11,7 +11,7 @@ const databaseConfig = {
         sqlite: {
             client: 'sqlite',
             connection: {
-                filename: 'tmp/db.sqlite',
+                filename: path.resolve(__dirname, 'db.sqlite3')
             },
             migrations: {
                 naturalSort: true,
