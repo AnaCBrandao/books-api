@@ -26,4 +26,3 @@ Route.group(() => {
   Route.post('/books/:bookId/comments', 'CommentsController.store')
 }).prefix('/api')
 
-//batata
